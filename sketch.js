@@ -4,14 +4,14 @@ function setup() {
   waning = true;
   waxing = false;
 
-  celebrating = false;
+  //celebrating = false;
   noStroke();
   rightWidth = width *.17;
   leftWidth = width *.17;
 
-  celebrationSound = loadSound("assets/celebrateSound.mp3");
+  //celebrationSound = loadSound("assets/celebrateSound.mp3");
 
-  confetti = loadImage("assets/Confetti.jpg");
+  //confetti = loadImage("assets/Confetti.jpg");
 }
 
 function draw() {
@@ -40,7 +40,7 @@ function silhouette() {
   //limits for widths
   // rightwidth = width *.83;
   // leftWidth = width *.17;
-  print(this.celebrationSound.isLoaded());
+  //print(this.celebrationSound.isLoaded());
 
   if (waning) {
     leftWidth++;
@@ -63,7 +63,7 @@ function silhouette() {
     rightWidth = width *.17;
     leftWidth = width *.17;
     waning = true;
-    celebrate();
+    //celebrate();
   }
 
   
@@ -82,10 +82,10 @@ function silhouette() {
   //ellipse(width/2, height/2, 100, 100);
 }
 
-function celebrate() {
-  if (!this.celbrating && !this.celebrationSound.isPlaying()) {
-    this.celebrationSound.play();
-    this.celebrating = true;
-  }
-  image(confetti, 0, 0);
-}
+// function celebrate() {
+//   if (!this.celbrating && !this.celebrationSound.isPlaying()) {
+//     this.celebrationSound.play();
+//     this.celebrating = true;
+//   }
+//   image(confetti, 0, 0);
+// }
